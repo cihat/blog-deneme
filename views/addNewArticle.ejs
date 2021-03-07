@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Yeni Yazı Ekle</title>
+  <%- include('includes/head.ejs') %>
+
+</head>
+
+<body>
+  <%- include('includes/navigation.ejs') %>
+
+    <div class="container-fluid contact_us_bg_img">
+      <div class="container">
+        <div class="row">
+          <a href="#" class="fh5co_con_123"><i class="fa fa-home"></i></a>
+          <a href="#" class="fh5co_con pt-2">Yeni Yazı Ekle</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid mb-4">
+      <div class="container">
+        <div class="col-12 text-center contact_margin_svnit ">
+          <div class="text-center fh5co_heading py-2">Yeni Yazı Ekle </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <form class="row" id="fh5co_contact_form" action="/add-new-article" method="POST">
+              <div class="col-12 py-3">
+                <input type="text" class="form-control fh5co_contact_text_box" placeholder="Yazı Başlığı"
+                  name="title" />
+              </div>
+              <div class="col-12 py-3">
+                <textarea class="form-control fh5co_contacts_message" placeholder="Yazı İçerik"
+                  name="article"></textarea>
+              </div>
+              <div class="col-12 py-3">
+                <input type="text" class="form-control fh5co_contact_text_box" placeholder="Fotoğraf Url"
+                  name="imageUrl" />
+              </div>
+              <div class="col-12 py-3 text-center"> <button href="#" class="btn contact_btn" type="submit">Yazıyı
+                  Yayınla</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%- include('includes/footer.ejs') %>
+</body>
+
+</html>

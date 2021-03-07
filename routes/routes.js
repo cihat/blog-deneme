@@ -6,7 +6,7 @@ router.get("/", controller.getArticles);
 
 router.get("/add-new-article", controller.getNewArticlePage);
 
-router.get("/get-article", controller.getArticle);
+router.get("/get-article/:articleId", controller.getArticle);
 
 router.post("/add-new-article", controller.postAddArticle);
 

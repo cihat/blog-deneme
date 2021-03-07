@@ -38,9 +38,13 @@ exports.getNewArticlePage = (req, res, next) => {
 };
 
 exports.getArticle = (req, res, next) => {
-  res.render("getArticle", {
-    pageTitle: "Ana Sayfa",
-    path: "/home",
+  const prodId = req.params.articleId;
+  Article.findById(prodId).then((article) => {
+    res.render("getArticle", {
+      pageTitle: "Ana Sayfa",
+      articles: article,
+      path: "/home",
+    });
   });
 };
 
@@ -59,10 +63,7 @@ exports.postAddArticle = (req, res, next) => {
     .then((result) => {
       console.log("Created Article");
       res.redirect("/");
+      return result;
     })
     .catch((err) => console.log(err));
-  // res.render("getArticle", {
-  //   pageTitle: "Ana Sayfa",
-  //   path: "/home",
-  // });
 };

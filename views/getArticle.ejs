@@ -6,12 +6,6 @@
     <%= articles.title %>
   </title>
   <%- include('includes/head.ejs') %>
-    <style>
-      .container {
-        margin: 2rem;
-      }
-    </style>
-
 </head>
 
 <body class="single">
@@ -20,9 +14,7 @@
       <div class="container paddding">
         <div class="row mx-0">
           <div class="col-md-8 animate-box" data-animate-effect="fadeInLeft">
-
             <li style="list-style-type: none;">
-
               <div class="row pb-4">
                 <a href="/get-article/<%= articles._id %>">
                   <div class="col-md-5">
@@ -46,9 +38,7 @@
                   </div>
                 </a>
               </div>
-
             </li>
-
           </div>
         </div>
       </div>

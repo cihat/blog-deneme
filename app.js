@@ -25,7 +25,7 @@ app.use(errorController.get404);
 
 mongoose
   .connect(
-    `mongodb+srv://cihat:i6yJPHJvIVYwWOHB@cluster1.iq58a.mongodb.net/test?retryWrites=true&w=majority`
+    `mongodb+srv://cihat:i6yJPHJvIVYwWOHB@cluster1.iq58a.mongodb.net/test?authSource=admin`
   )
   .then((result) => {
     app.listen(PORT);

@@ -28,6 +28,6 @@ mongoose
     `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster1.iq58a.mongodb.net/${process.env.MONGO_DEFAULT_DATABASE}`
   )
   .then((result) => {
-    app.listen(PORT);
+    app.listen(process.env.PORT || 3000);
   })
   .catch((err) => console.log(err));

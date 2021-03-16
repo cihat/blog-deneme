@@ -1,8 +1,0 @@
-{
-  "env": {
-    "MONGO_USER": "cihat",
-    "MONGO_PASSWORD": "iPmC86ACaeLT66at",
-    "MONGO_DEFAULT_DATABASE": "test",
-    "PORT": "3000"
-  }
-}

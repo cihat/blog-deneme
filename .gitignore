@@ -4,3 +4,5 @@ nodemon.json
 
 .env
 .gitignore
+
+config.js

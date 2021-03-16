@@ -12,7 +12,7 @@ const {
 const errorController = require("./controllers/error");
 
 const app = express();
-const MONGODB_URI = `mongodb+srv://${MONGO_USER}:${MONGO_PASSWORD}@cluster1.iq58a.mongodb.net/${MONGO_DEFAULT_DATABASE}`;
+const MONGODB_URI = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster1.iq58a.mongodb.net/${process.env.MONGO_DEFAULT_DATABASE}`;
 
 app.set("view engine", "ejs");
 app.set("views", "views");
@@ -28,6 +28,6 @@ app.use(errorController.get404);
 mongoose
   .connect(MONGODB_URI, { useNewUrlParser: true, seUnifiedTopology: true })
   .then((result) => {
-    app.listen(PORT || 3000);
+    app.listen(process.env.PORT || 3000);
   })
   .catch((err) => console.log(err));

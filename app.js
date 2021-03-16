@@ -25,7 +25,7 @@ app.use(errorController.get404);
 
 mongoose
   .connect(
-    `mongodb+srv://cihat:i6yJPHJvIVYwWOHB@cluster1.iq58a.mongodb.net/test?authSource=admin`
+    `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster1.iq58a.mongodb.net/${process.env.MONGO_DEFAULT_DATABASE}?authSource=admin`
   )
   .then((result) => {
     app.listen(PORT);
